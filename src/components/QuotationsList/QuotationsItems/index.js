@@ -3,7 +3,8 @@ import { View, Image, Text } from "react-native";
 import style from "./style";
 
 
-export default function QuotationsItems() {
+export default function QuotationsItems(props) {
+
   return (
     <View style={style.mainContant}>
       <View style={style.contextLeft}>
@@ -13,12 +14,12 @@ export default function QuotationsItems() {
           />
           <View>
             <Text style={style.dayContation2}>Bitcoin</Text>
-            <Text style={style.dayContation}>09/08/23</Text>
+            <Text style={style.dayContation}>{props.data} </Text>
           </View>
         </View>
       </View>
       <View style={style.contextRigth}>
-        <Text style={style.price}>$ 53331.052</Text>
+        <Text style={style.price}>{props.valor}</Text>
       </View>
     </View>
   )
